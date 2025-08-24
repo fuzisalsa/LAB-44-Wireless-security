@@ -25,3 +25,8 @@ berikut penjelasan secara singkat tentang mode security profile di wireless:
   **3. Static keys-required** Digunakan pada mode WEP. Router tidak menerima dan mengirim frame yang tidak dienkripsi. Jika mode inii ditetapkan pada sisi station, maka hanya bisa terkoneksi ke AP dengan mode yang sama.   
  
   **4.Dynamic Keys** Dynamic Keys Mode autentikasi EAP (Extensible Authentication Protocol) yang disupport oleh Mikrotik adalah EAP-TLS, dimana proses autentikasi dilakukan dengan mengunakan CA Certificate. Mode PSK (Pre Shared Key), dukungan keamanan dari enskripsi WPA/WPA2 dan cara setting yang mudah.  
+
+
+
+# sumber 
+https://citraweb.com/artikel/93/
