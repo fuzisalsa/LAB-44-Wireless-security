@@ -36,7 +36,7 @@ berikut penjelasan secara singkat tentang mode security profile di wireless:
 
 2. Dalam penggunaan WEP kita harus melakukan set WEP-Key terlebih dahulu, melakukan convert sebuah kata ke dalam bentuk bilangan hexadecimal pada layanan WEP Key Generator yang banyak terdapat di internet.
 
-![m](x7.PNG)
+![m](X7.PNG)
 
 3. pilih tab satatic key, masuk ke kolom 0x
 
