@@ -26,7 +26,54 @@ berikut penjelasan secara singkat tentang mode security profile di wireless:
  
   **4.Dynamic Keys** Dynamic Keys Mode autentikasi EAP (Extensible Authentication Protocol) yang disupport oleh Mikrotik adalah EAP-TLS, dimana proses autentikasi dilakukan dengan mengunakan CA Certificate. Mode PSK (Pre Shared Key), dukungan keamanan dari enskripsi WPA/WPA2 dan cara setting yang mudah.  
 
+# Konfigurasi Wireless Security
 
+**WEP Static Keys**
 
+1. pilih menu wireless pilih tab security , lalu klik (+) atau edit yang sudah ada. 
+
+![m](x1.PNG)
+
+2. Dalam penggunaan WEP kita harus melakukan set WEP-Key terlebih dahulu, melakukan convert sebuah kata ke dalam bentuk bilangan hexadecimal pada layanan WEP Key Generator yang banyak terdapat di internet.
+
+![m](x7.PNG)
+
+3. pilih tab satatic key, masuk ke kolom 0x
+
+![m](x2.PNG)
+
+**WPA/WPA2 PSK**
+
+1. pilih menu wireless pilih tab security , lalu klik (+) atau edit yang sudah ada.       
+   Pilih Dynamuic keys lalu checklist **WPA/WPA1 PSK**, setelah itu masukan password dibagian WPA/2 Pre-Shared Key. 
+
+![m](x3.PNG)
+
+**WPA/WPA2 EAP**
+
+1. pilih menu wireless pilih tab security , lalu klik (+) atau edit yang sudah ada.    
+   Pilih dynamic keys dan checklist WPA/2 EAP.
+
+![m](x4.PNG)
+
+2. Kita bisa tentukan bagaimana mode WPA EAP ini bekerja. Pindah ke tab EAP.
+
+![m](x5.PNG)
+
+*EAP METHODS*    
+EAP-TLS, menggunakan autentikasi EAP-TLS built-in pada perangkat. Sisi AP dan Client harus mengunakan certificate yang sesuai. lalu Passthrough, AP akan me relay autentikasi ke Radius Server. Tidak ada efeknya jika ditetapkan pada sisi perangkat Client.
+
+*TLS Mode*     
+verify certificate, melakukan verifikasi sertifikat. Perangkat yang terkoneksi harus memiliki sertifikat yang valid.  
+dont verify certificate, tidak akan melakukan verifikasi sertifikat remote device.   
+no certificates, tidak memerlukan sertifikat untuk bisa terkoneksi.   
+
+**RADIUS MAC Authentication**
+Selain metode-metodr di atas, kita juga bisa menerapkan autentikasi berdasarkan MAC Address dari Client yang akan terkoneksi.
+
+![m](x6.PNG)
+
+# keimpulan 
+Security profile jaringan mencakup berbagai metode otentikasi dan enkripsi seperti **WEP Static Keys** (kurang aman), **WPA/WPA2 PSK** (cukup aman untuk jaringan kecil), **WPA/WPA2 EAP** dengan **RADIUS** (tingkat keamanan tinggi untuk skala besar), serta **MAC Authentication** (lemah dan hanya cocok sebagai pelengkap), yang masing-masing memiliki tingkat keamanan, kompleksitas, dan penerapan yang berbeda sesuai kebutuhan jaringan.
 # sumber 
 https://citraweb.com/artikel/93/
